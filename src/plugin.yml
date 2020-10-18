@@ -1,0 +1,9 @@
+name: MirageSK
+author: _mIrAgEdayo_
+description: Usefull addon for developers.
+version: 1.0-Beta
+main: si.f5.mirageserver.MirageSk
+depend:
+  - Skript
+softdepend:
+  - WorldGuard
