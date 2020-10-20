@@ -7,3 +7,5 @@ depend:
   - Skript
 softdepend:
   - WorldGuard
+  - GlowAPI
+  - PacketListenerAPI

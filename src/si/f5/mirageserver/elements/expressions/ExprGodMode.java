@@ -1,17 +1,30 @@
 package si.f5.mirageserver.elements.expressions;
 
 import ch.njol.skript.classes.Changer;
+import ch.njol.skript.doc.Description;
+import ch.njol.skript.doc.Examples;
+import ch.njol.skript.doc.RequiredPlugins;
+import ch.njol.skript.doc.Since;
 import ch.njol.skript.expressions.base.SimplePropertyExpression;
 import ch.njol.util.coll.CollectionUtils;
 import com.sk89q.worldguard.bukkit.ConfigurationManager;
 import com.sk89q.worldguard.bukkit.WorldGuardPlugin;
 import com.sk89q.worldguard.session.Session;
 import com.sk89q.worldguard.session.handler.GodMode;
+import jdk.jfr.Name;
 import org.bukkit.craftbukkit.libs.jline.internal.Nullable;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 
-
+@Name("Expression GodMode")
+@Description({"Returns(set, etc...) godmode of player using WorldGuard",
+        "WorldGuardを使用してプレイヤーをgodモードにしたり解除したりできます。"})
+@Examples({"on join:",
+        "\tif godmode of player is false:",
+        "\t\tset godmode of player to true",
+        "\t\tsend \"Godmode enabled!\""})
+@Since("1.0")
+@RequiredPlugins("WorldGuard")
 public class ExprGodMode extends SimplePropertyExpression<Player, Boolean> {
 
     static {
